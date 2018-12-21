@@ -13,7 +13,6 @@ target/
 
 # idea ignores
 .idea/
-zgl-eureka/
 *.iml
 *.ipr
 *.iws
