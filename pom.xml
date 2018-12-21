@@ -15,7 +15,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>zgl-spring cloud</name>
+    <name>zgl-springcloud</name>
     <description>zhuguolong Spring Cloud</description>
     <url>https://github.com/zhuguolong/zgl-springcloud</url>
 
@@ -28,5 +28,6 @@
         <module>zgl-parent</module>
         <module>zgl-eureka</module>
         <module>zgl-zuul</module>
+        <module>zgl-user</module>
     </modules>
 </project>

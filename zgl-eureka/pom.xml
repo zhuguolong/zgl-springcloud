@@ -8,10 +8,10 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../zgl-parent/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.zgl.eureka</groupId>
+    <groupId>com.zgl</groupId>
     <artifactId>zgl-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka</name>
+    <name>zgl-eureka</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

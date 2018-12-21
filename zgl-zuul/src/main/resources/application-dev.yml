@@ -9,7 +9,7 @@ zuul:
     user:
       path: /v1.0/user/**
       stripPrefix: false
-      serviceId: User
+      serviceId: zgl-user
 
 server:
   port: 8080
