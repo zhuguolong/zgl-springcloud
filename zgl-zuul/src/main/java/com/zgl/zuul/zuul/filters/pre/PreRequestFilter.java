@@ -51,7 +51,7 @@ public class PreRequestFilter extends ZuulFilter {
      * @param reqMap request.getParameterMap()
      * @return
      */
-    public static Map<String, Object> paramsMap(Map reqMap) {
+    private static Map<String, Object> paramsMap(Map reqMap) {
         Map<String, Object> returnMap = new HashMap<>();
 
         if (reqMap != null) {
