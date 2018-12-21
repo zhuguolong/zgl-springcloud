@@ -1,5 +1,5 @@
 spring:
   application:
-    name: Eureka
+    name: zgl-eureka
   profiles:
     active: dev
