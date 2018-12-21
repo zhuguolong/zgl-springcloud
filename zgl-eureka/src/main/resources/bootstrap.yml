@@ -3,6 +3,3 @@ spring:
     name: eureka
   profiles:
     active: dev
-
-server:
-  port: 8081

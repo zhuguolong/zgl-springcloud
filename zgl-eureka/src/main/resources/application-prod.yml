@@ -1,6 +1,10 @@
 eureka:
   instance:
-    hostname: localhost
+    hostname: localhost # eureka实列的主机名
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false # 是否想eureka注册自己
+    fetch-registry: false # 是否检索服务
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ # 指定eureka位置
+server:
+  port: 8081
