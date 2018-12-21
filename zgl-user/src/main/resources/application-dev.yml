@@ -4,3 +4,42 @@ eureka:
       defaultZone: http://localhost:8081/eureka/
 server:
   port: 8082
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      initialSize: 8 # 初始化大小
+      minIdle: 10 # 最小
+      maxActive: 20 # 最大
+      maxWait: 60000 # 等待超时时间
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.zgl.user.domain
+# 显示sql
+logging:
+  level:
+    com:
+      zgl:
+        user:
+          dao: debug
+# pagehelper分页插件
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
