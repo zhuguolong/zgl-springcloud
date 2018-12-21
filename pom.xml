@@ -23,5 +23,8 @@
         <url>https://github.com</url>
     </organization>
 
-    <modules></modules>
+    <modules>
+        <module>zgl-parent</module>
+        <module>zgl-eureka</module>
+    </modules>
 </project>
