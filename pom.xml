@@ -29,5 +29,6 @@
         <module>zgl-eureka</module>
         <module>zgl-zuul</module>
         <module>zgl-user</module>
+        <module>zgl-common</module>
     </modules>
 </project>

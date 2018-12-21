@@ -17,7 +17,13 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <dependencies></dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>com.zgl</groupId>
+            <artifactId>zgl-common</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

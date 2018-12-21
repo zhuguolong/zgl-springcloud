@@ -8,22 +8,13 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../zgl-parent/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>zgl-eureka</artifactId>
+    <groupId>com.zgl</groupId>
+    <artifactId>zgl-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>zgl-eureka</name>
+    <name>zgl-common</name>
     <description>Demo project for Spring Boot</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.zgl</groupId>
-            <artifactId>zgl-common</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-    </dependencies>
+    <dependencies></dependencies>
 
     <build>
         <plugins>
@@ -43,5 +34,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
