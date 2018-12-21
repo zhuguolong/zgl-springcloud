@@ -27,5 +27,6 @@
     <modules>
         <module>zgl-parent</module>
         <module>zgl-eureka</module>
+        <module>zgl-zuul</module>
     </modules>
 </project>
