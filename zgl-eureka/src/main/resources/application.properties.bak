@@ -1,0 +1,7 @@
+spring.application.name=eureka
+server.port=8080
+
+eureka.instance.hostname=localhost
+# 禁止eureka客户端注册行为
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
