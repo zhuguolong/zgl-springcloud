@@ -8,23 +8,16 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../zgl-parent/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.zgl</groupId>
     <artifactId>zgl-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>zgl-common</name>
-    <description>Demo project for Spring Boot</description>
 
     <dependencies></dependencies>
 
     <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <outputDirectory>../deploy</outputDirectory>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
