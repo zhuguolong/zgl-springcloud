@@ -4,12 +4,16 @@ eureka:
       defaultZone: http://localhost:8081/eureka/
 
 zuul:
-  ignored-services: "*"
+  ignored-services: '*'
   routes:
-    user:
+    zgl-user:
       path: /v1.0/user/**
       stripPrefix: false
       serviceId: zgl-user
+
+#logging:
+#  level:
+#    com.netflix: debug
 
 server:
   port: 8080
@@ -18,5 +22,5 @@ spring:
   http:
     multipart:
       enabled: true
-      max-file-size: 50MB
-      max-request-size: 1000MB
+      max-file-size: 2000MB
+      max-request-size: 2500MB
