@@ -1,6 +1,6 @@
-package com.zgl.zuul.zuul;
+package com.zgl.zuul;
 
-import com.zgl.zuul.zuul.filters.pre.PreRequestFilter;
+import com.zgl.zuul.filters.pre.PreRequestFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
