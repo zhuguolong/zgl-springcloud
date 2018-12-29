@@ -2,11 +2,13 @@ package com.zgl.zuul.filters.pre;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.apache.commons.lang.CharEncoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -20,6 +22,12 @@ public class PreRequestFilter extends ZuulFilter {
 
     private static Logger log = LoggerFactory.getLogger(PreRequestFilter.class);
 
+    private static final String[][] preAuthenticationIgnoreUris = {
+            {"", "POST"},
+            {"", ""},
+            {"", ""}
+    };
+
     @Override
     public String filterType() {
         return FilterConstants.PRE_TYPE;
@@ -32,6 +40,24 @@ public class PreRequestFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
+        RequestContext currentContext = RequestContext.getCurrentContext();
+        HttpServletRequest request = currentContext.getRequest();
+
+        try {
+            request.setCharacterEncoding(CharEncoding.UTF_8);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        String requestURI = request.getRequestURI();
+        String method = request.getMethod();
+
+        for (String[] preAuthenticationIgnoreUri : preAuthenticationIgnoreUris) {
+            if (requestURI.startsWith(preAuthenticationIgnoreUri[0]) && (preAuthenticationIgnoreUri[1].equals(method) || ("*").equals(method))) {
+                return false;
+            }
+        }
+
         return true;
     }
 
