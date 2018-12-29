@@ -27,7 +27,7 @@ public class PreRequestFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return FilterConstants.PRE_DECORATION_FILTER_ORDER - 1;
+        return FilterConstants.DEBUG_FILTER_ORDER;
     }
 
     @Override
