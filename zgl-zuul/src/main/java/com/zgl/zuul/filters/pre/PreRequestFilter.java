@@ -75,7 +75,6 @@ public class PreRequestFilter extends ZuulFilter {
                         value.append(value1).append(",");
                     }
                     value = new StringBuilder("[" + value.substring(0, value.length() - 1) + "]");
-
                 } else {
                     value = new StringBuilder(valueObj.toString());
                 }
