@@ -30,5 +30,6 @@
         <module>zgl-zuul</module>
         <module>zgl-user</module>
         <module>zgl-common</module>
+        <module>tx-manager</module>
     </modules>
 </project>

@@ -1,0 +1,36 @@
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    prefer-ip-address: true
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 10
+      max-wait: -1
+      max-idle: 5
+      min-idle: 0
+    timeout: 0
+
+tm:
+  transaction:
+    netty:
+      delaytime: 5 # 业务模块与TxManager之间通讯的最大等待时间（单位：秒）
+      hearttime: 15 # 业务模块与TxManager之间通讯的心跳时间（单位：秒）
+  redis:
+    savemaxtime: 30 # 存储到redis下的数据最大保存时间（单位：秒）
+  socket:
+    port: 9999 # TxManager的LCN协议的端口
+    maxconnection: 1000 # TxManager最大允许的建立连接数量
+  compensate:
+    auto: false # 事务自动补偿 (true:开启，false:关闭)
+    notifyUrl: http://127.0.0.1:7000/path
+    tryTime: 30
+    maxWaitTime: 5000

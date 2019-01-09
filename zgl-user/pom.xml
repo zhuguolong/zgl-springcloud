@@ -8,7 +8,6 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../zgl-parent/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.zgl</groupId>
     <artifactId>zgl-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>zgl-user</name>
@@ -16,9 +15,40 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <lcn.last.version>4.1.0</lcn.last.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>transaction-springcloud</artifactId>
+            <version>${lcn.last.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codingapi</groupId>
+            <artifactId>tx-plugins-db</artifactId>
+            <version>${lcn.last.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.3.8.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>com.zgl</groupId>
             <artifactId>zgl-common</artifactId>

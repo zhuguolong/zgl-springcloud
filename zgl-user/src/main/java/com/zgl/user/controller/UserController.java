@@ -27,7 +27,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/user/findByPhone")
+    @GetMapping("/findByPhone")
     public Object findByPhone(String phone) {
         try {
             User user = userService.findByPhone(phone);
